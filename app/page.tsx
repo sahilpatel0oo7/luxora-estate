@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import Footer from './footer';
 import Header from './header';
 
 // Shared Style Elements for Clean Design
-const badgeStyle = {
+const badgeStyle: CSSProperties = {
   background: 'linear-gradient(90deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15))',
   border: '1px solid rgba(14, 165, 233, 0.3)',
   color: '#38bdf8',
@@ -19,7 +19,7 @@ const badgeStyle = {
   display: 'inline-block',
 };
 
-const inputContainerStyle = {
+const inputContainerStyle: any = {
   display: 'flex',
   flexDirection: 'column',
   flex: 1,
@@ -28,16 +28,16 @@ const inputContainerStyle = {
   minWidth: '160px',
 };
 
-const labelStyle = {
+const labelStyle: any = {
   fontSize: '0.75rem',
   color: '#94a3b8',
-  textTransform: 'uppercase',
+  textTransform: 'uppercase' as const,
   letterSpacing: '0.05em',
   marginBottom: '6px',
   fontWeight: '600',
 };
 
-const inputStyle = {
+const inputStyle: any = {
   background: 'transparent',
   border: 'none',
   color: '#ffffff',
