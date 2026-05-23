@@ -19,14 +19,6 @@ const badgeStyle: CSSProperties = {
   display: 'inline-block',
 };
 
-const inputContainerStyle: any = {
-  display: 'flex',
-  flexDirection: 'column',
-  flex: 1,
-  padding: '10px 20px',
-  borderRight: '1px solid rgba(255, 255, 255, 0.1)',
-  minWidth: '160px',
-};
 
 const labelStyle: any = {
   fontSize: '0.75rem',
@@ -112,12 +104,30 @@ export default function Home() {
 
           {/* Integrated Dynamic Form Input Layout Grid */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px', textAlign: 'left', background: 'rgba(255,255,255,0.02)', padding: '12px', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.04)' }}>
-            <div style={inputContainerStyle}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column' as const,
+                flex: 1,
+                padding: '10px 20px',
+                borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+                minWidth: '160px',
+              }}
+            >
               <label style={labelStyle}>Location Target</label>
               <input type="text" placeholder="e.g. Beverly Hills, CA" style={inputStyle} />
             </div>
             
-            <div style={inputContainerStyle}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column' as const,
+                flex: 1,
+                padding: '10px 20px',
+                borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+                minWidth: '160px',
+              }}
+            >
               <label style={labelStyle}>Property Category</label>
               <select style={{ ...inputStyle, cursor: 'pointer', color: '#ffffff' }}>
                 <option value="villa" style={{background: '#0f172a'}}>Modernist Villa</option>
@@ -126,7 +136,16 @@ export default function Home() {
               </select>
             </div>
 
-            <div style={{ ...inputContainerStyle, borderRight: 'none' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column' as const,
+                flex: 1,
+                padding: '10px 20px',
+                borderRight: 'none',
+                minWidth: '160px',
+              }}
+            >
               <label style={labelStyle}>Investment Range</label>
               <input type="text" placeholder="\$2.5M - \$5.0M" style={inputStyle} />
             </div>
